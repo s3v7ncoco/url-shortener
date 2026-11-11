@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+  <title>Free — Clean & Simple URL Shortener</title>
+  <link rel="stylesheet" href="./style.css" />
+  <meta name="description" content="A minimal, open-source URL shortener." />
+</head>
+<body>
+  <main class="container">
+    <h1>URL Shortener</h1>
+    <p class="tagline">Create clean short links with optional 5s ad timer.</p>
+
+    <form id="shorten-form">
+      <label>
+        Long URL*
+        <input
+          id="long-url"
+          type="url"
+          required
+          placeholder="https://example.com/very/long/link"
+        />
+      </label>
+
+      <div class="grid">
+        <label>
+          Custom code (optional)
+          <input id="custom-code" type="text" placeholder="my-alias" />
+        </label>
+
+        <label class="switch-label">
+          5s Ad timer?
+          <select id="mode">
+            <option value="instant">No (instant redirect)</option>
+            <option value="timer">Yes (show 5s page)</option>
+          </select>
+        </label>
+      </div>
+
+      <button type="submit">Shorten</button>
+    </form>
+
+    <div id="result" class="result hidden">
+      <h2>Your short link</h2>
+      <p id="short-url"></p>
+      <div class="actions">
+        <button id="copy-btn" type="button">Copy</button>
+        <a
+          id="open-btn"
+          class="btn"
+          href="#"
+          target="_blank"
+          rel="noopener"
+        >Open</a>
+      </div>
+      <p class="hint">
+        Tip: add <code>?t=1</code> to force the 5s page even if you chose instant
+        (e.g. when sharing on social to show ads).
+      </p>
+    </div>
+
+    <footer>
+      <p>
+        Built with vanilla HTML/CSS/JS + Cloudflare Pages Functions by Digital Accolades<br />
+        MIT Licensed.
+      </p>
+      <div class="footer-donate">
+        <a
+          href="https://donate.stripe.com/bJeeVf50m3Spezm6vn8AE03"
+          target="_blank"
+          class="donate-btn"
+          rel="noopener"
+        >
+          Support my work
+        </a>
+      </div>
+    </footer>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>

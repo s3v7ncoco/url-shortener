@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Node / tooling (even if unused now)
+node_modules/
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
+
+# Cloudflare / local env
+.wrangler/
+.env
+.env.*
+dist/
+build/
